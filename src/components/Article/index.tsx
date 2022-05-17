@@ -17,14 +17,17 @@ const Article: React.FC<News> = ({ articles, title }) => {
             <article className={styles.article__main}>
               <div className={styles.article__title}>
                 <p>{article.title}</p>
-                <p className={styles.article__time}>{time}時間前</p>
+                <p className={styles.article__time}>
+                  {time}
+                  時間前
+                </p>
               </div>
               {article.urlToImage && (
                 <img
                   key={i}
                   src={article.urlToImage}
-                  alt={`${article.title} image`}
                   className={styles.article__img}
+                  alt={`${article.title} image`}
                 />
               )}
             </article>
